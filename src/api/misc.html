@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misc &mdash; Battery Management System  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Data Objects" href="data_objects.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #005e83" >
+            <a href="../../index.html" class="icon icon-home"> Battery Management System<img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v21.0
+
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supported_hardware.html">Supported Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../supported_hardware.html#boards">Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supported_hardware.html#bms-ics">BMS ICs</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/workspace_setup.html">Workspace Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building_flashing.html">Building and Flashing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev/building_flashing.html#boards-with-stm32-mcu">Boards with STM32 MCU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/building_flashing.html#boards-with-esp32-mcu">Boards with ESP32 MCU</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/customization.html">Customization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev/customization.html#hardware-specific-changes">Hardware-specific changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/customization.html#application-firmware-configuration">Application firmware configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dev/customization.html#change-battery-capacity-cell-type-and-number-of-cells-in-series">Change battery capacity, cell type and number of cells in series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dev/customization.html#configure-serial-for-thingset-protocol">Configure serial for ThingSet protocol</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/unit_tests.html">Unit Tests</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_objects.html">Data Objects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Misc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#eeprom">EEPROM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#button">Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#helper">Helper</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #005e83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Battery Management System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Misc</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/LibreSolar/bms-firmware/blob/main/docs/src/api/misc.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="misc">
+<h1>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h1>
+<section id="eeprom">
+<h2>EEPROM<a class="headerlink" href="#eeprom" title="Permalink to this headline">¶</a></h2>
+<p>Handling of internal or external EEPROM to store device configuration. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="c macro">
+<dt id="c.EEPROM_UPDATE_INTERVAL">
+<span class="target" id="eeprom_8h_1a27d811e614d633e5b59d4885025443c5"></span><code class="sig-name descname"><span class="pre">EEPROM_UPDATE_INTERVAL</span></code><a class="headerlink" href="#c.EEPROM_UPDATE_INTERVAL" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt id="c.eeprom_store_data">
+<span class="target" id="eeprom_8h_1a5921f53f0b917fb05b3d4aa437d674e4"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">eeprom_store_data</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.eeprom_store_data" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Store current charge controller data to EEPROM </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.eeprom_restore_data">
+<span class="target" id="eeprom_8h_1a31906ef11f87c6ce251c94f7c4720a67"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">eeprom_restore_data</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.eeprom_restore_data" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Restore charge controller data from EEPROM and write to variables in RAM </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.eeprom_update">
+<span class="target" id="eeprom_8h_1a513a782a9a640732bea672f41c44f61b"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">eeprom_update</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.eeprom_update" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Stores data to EEPROM every 6 hours (can be called regularly) </p>
+</dd></dl>
+
+</div>
+</section>
+<section id="button">
+<h2>Button<a class="headerlink" href="#button" title="Permalink to this headline">¶</a></h2>
+<p>Functions to handle on/off switch. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt id="c.button_init">
+<span class="target" id="button_8h_1a681470fea7c7eaa67094df3e5567a8f7"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">button_init</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.button_init" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize button and configure interrupts </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.button_pressed_for_3s">
+<span class="target" id="button_8h_1a81d6b11359941b23dc5e0af3a2773b12"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">button_pressed_for_3s</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.button_pressed_for_3s" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if button was pressed for 3 seconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true if pressed for at least 3 seconds </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+<section id="helper">
+<h2>Helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h2>
+<p>General helper functions. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt id="c.interpolate">
+<span class="target" id="helper_8h_1a44ab45d780d1b70544ed9dbe6d70020f"></span><span class="pre">float</span> <code class="sig-name descname"><span class="pre">interpolate</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">float</span> <em><span class="pre">a</span></em><span class="pre">[</span><span class="pre">]</span>, <em class="property"><span class="pre">const</span></em> <span class="pre">float</span> <em><span class="pre">b</span></em><span class="pre">[</span><span class="pre">]</span>, <span class="pre">size_t</span> <em><span class="pre">size</span></em>, <span class="pre">float</span> <em><span class="pre">value_a</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.interpolate" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Interpolation in a look-up table. Values of a must be monotonically increasing/decreasing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>interpolated value of array b at position value_a </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.uptime">
+<span class="target" id="helper_8h_1a2f717156d602def3f3e938b3b83935c5"></span><span class="pre">uint32_t</span> <code class="sig-name descname"><span class="pre">uptime</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.uptime" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Framework-independent system uptime</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>seconds since the system booted </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.byte2bitstr">
+<span class="target" id="helper_8h_1a3bcb3bb577067620f4b58b45abef8226"></span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><code class="sig-name descname"><span class="pre">byte2bitstr</span></code><span class="sig-paren">(</span><span class="pre">uint8_t</span> <em><span class="pre">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.byte2bitstr" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Convert byte to bit-string</p>
+<p>Attention: Uses static buffer, not thread-safe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pointer to bit-string (8 characters + null-byte) </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data_objects.html" class="btn btn-neutral float-left" title="Data Objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 The Libre Solar Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

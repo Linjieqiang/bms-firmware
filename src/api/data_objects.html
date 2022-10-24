@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Objects &mdash; Battery Management System  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Misc" href="misc.html" />
+    <link rel="prev" title="BMS" href="bms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #005e83" >
+            <a href="../../index.html" class="icon icon-home"> Battery Management System<img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v21.0
+
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supported_hardware.html">Supported Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../supported_hardware.html#boards">Boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supported_hardware.html#bms-ics">BMS ICs</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/workspace_setup.html">Workspace Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building_flashing.html">Building and Flashing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev/building_flashing.html#boards-with-stm32-mcu">Boards with STM32 MCU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/building_flashing.html#boards-with-esp32-mcu">Boards with ESP32 MCU</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/customization.html">Customization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev/customization.html#hardware-specific-changes">Hardware-specific changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/customization.html#application-firmware-configuration">Application firmware configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../dev/customization.html#change-battery-capacity-cell-type-and-number-of-cells-in-series">Change battery capacity, cell type and number of cells in series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dev/customization.html#configure-serial-for-thingset-protocol">Configure serial for ThingSet protocol</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/unit_tests.html">Unit Tests</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bms.html">BMS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc.html">Misc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misc.html#eeprom">EEPROM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html#button">Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc.html#helper">Helper</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #005e83" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Battery Management System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Data Objects</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/LibreSolar/bms-firmware/blob/main/docs/src/api/data_objects.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-objects">
+<h1>Data Objects<a class="headerlink" href="#data-objects" title="Permalink to this headline">¶</a></h1>
+<p>Handling of ThingSet data nodes. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="c macro">
+<dt id="c.ID_ROOT">
+<span class="target" id="data__objects_8h_1aaff125c9dc205ce80e268fa3ad2d07bf"></span><code class="sig-name descname"><span class="pre">ID_ROOT</span></code><a class="headerlink" href="#c.ID_ROOT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_INFO">
+<span class="target" id="data__objects_8h_1a4e311ab51c3b2c5b27d170ae0169759b"></span><code class="sig-name descname"><span class="pre">ID_INFO</span></code><a class="headerlink" href="#c.ID_INFO" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_MEAS">
+<span class="target" id="data__objects_8h_1a87c8324beae812e744668915772d77cf"></span><code class="sig-name descname"><span class="pre">ID_MEAS</span></code><a class="headerlink" href="#c.ID_MEAS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_STATE">
+<span class="target" id="data__objects_8h_1ac9ada408e126226ddfd93c012d9d190e"></span><code class="sig-name descname"><span class="pre">ID_STATE</span></code><a class="headerlink" href="#c.ID_STATE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_REC">
+<span class="target" id="data__objects_8h_1a9c73c6404a723d0ec3e4b24344e3833a"></span><code class="sig-name descname"><span class="pre">ID_REC</span></code><a class="headerlink" href="#c.ID_REC" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_INPUT">
+<span class="target" id="data__objects_8h_1aea46ad4e5a6f5534fe5af8de7321a6a9"></span><code class="sig-name descname"><span class="pre">ID_INPUT</span></code><a class="headerlink" href="#c.ID_INPUT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_CONF">
+<span class="target" id="data__objects_8h_1a5b83d540513a812e362452acb4fd4f04"></span><code class="sig-name descname"><span class="pre">ID_CONF</span></code><a class="headerlink" href="#c.ID_CONF" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_CAL">
+<span class="target" id="data__objects_8h_1a8c5f2d445529844185007f3e4edef020"></span><code class="sig-name descname"><span class="pre">ID_CAL</span></code><a class="headerlink" href="#c.ID_CAL" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_REPORT">
+<span class="target" id="data__objects_8h_1a7f9bb959cd4a56b319c4d3ee6c72384d"></span><code class="sig-name descname"><span class="pre">ID_REPORT</span></code><a class="headerlink" href="#c.ID_REPORT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_RPC">
+<span class="target" id="data__objects_8h_1ad103dd831b3d74cf2fddc365ff65788d"></span><code class="sig-name descname"><span class="pre">ID_RPC</span></code><a class="headerlink" href="#c.ID_RPC" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_DFU">
+<span class="target" id="data__objects_8h_1aa6f15b3cd1970cb9b6c284c4c7523083"></span><code class="sig-name descname"><span class="pre">ID_DFU</span></code><a class="headerlink" href="#c.ID_DFU" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_PUB">
+<span class="target" id="data__objects_8h_1ace1d4410c33c452cf58eaa34a75be11d"></span><code class="sig-name descname"><span class="pre">ID_PUB</span></code><a class="headerlink" href="#c.ID_PUB" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.ID_CTRL">
+<span class="target" id="data__objects_8h_1a64299fcfc8e7dcf22bce2d905a995051"></span><code class="sig-name descname"><span class="pre">ID_CTRL</span></code><a class="headerlink" href="#c.ID_CTRL" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.SUBSET_SER">
+<span class="target" id="data__objects_8h_1a599e1cc9c7300998c9496515b6e3443f"></span><code class="sig-name descname"><span class="pre">SUBSET_SER</span></code><a class="headerlink" href="#c.SUBSET_SER" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.SUBSET_CAN">
+<span class="target" id="data__objects_8h_1a63c926731cd58f371131d9bf7a319e07"></span><code class="sig-name descname"><span class="pre">SUBSET_CAN</span></code><a class="headerlink" href="#c.SUBSET_CAN" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.SUBSET_NVM">
+<span class="target" id="data__objects_8h_1af76e6899fb9edb8bc16b097e8d9bdb6e"></span><code class="sig-name descname"><span class="pre">SUBSET_NVM</span></code><a class="headerlink" href="#c.SUBSET_NVM" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.SUBSET_CTRL">
+<span class="target" id="data__objects_8h_1ad8dbb7f57b05c94f35deea7bddba53a0"></span><code class="sig-name descname"><span class="pre">SUBSET_CTRL</span></code><a class="headerlink" href="#c.SUBSET_CTRL" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c macro">
+<dt id="c.DATA_OBJECTS_VERSION">
+<span class="target" id="data__objects_8h_1a5724c1473dc38e7765da590b690931a8"></span><code class="sig-name descname"><span class="pre">DATA_OBJECTS_VERSION</span></code><a class="headerlink" href="#c.DATA_OBJECTS_VERSION" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="c function">
+<dt id="c.data_objects_update_conf">
+<span class="target" id="data__objects_8h_1ac693cf35cda92180b765f1e58f4cadd2"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">data_objects_update_conf</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.data_objects_update_conf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback function to be called when conf values were changed </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.data_objects_init">
+<span class="target" id="data__objects_8h_1a4aba82d66647c819b3727d689dff8b43"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">data_objects_init</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.data_objects_init" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initializes and reads data nodes from EEPROM </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.print_register">
+<span class="target" id="data__objects_8h_1a6c1115f12e4c0ccfbaa476763680b8d3"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">print_register</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.print_register" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback to read and print BMS register via ThingSet </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.reset_device">
+<span class="target" id="data__objects_8h_1a99ecd64ace3a2da5deb6872c73c058ea"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">reset_device</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.reset_device" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback to reset device (obviously…) </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.shutdown">
+<span class="target" id="data__objects_8h_1a7861ee1569802186a619778efc85af13"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.shutdown" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback to invoke bms_shutdown via ThingSet </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.thingset_auth">
+<span class="target" id="data__objects_8h_1a07d2d15aee95af10442cc27019eb25fe"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">thingset_auth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.thingset_auth" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Callback to provide authentication mechanism via ThingSet </p>
+</dd></dl>
+
+<dl class="c function">
+<dt id="c.uint64_to_base32">
+<span class="target" id="data__objects_8h_1a2570a293311fe0c5798486c755277830"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">uint64_to_base32</span></code><span class="sig-paren">(</span><span class="pre">uint64_t</span> <em><span class="pre">in</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">out</span></em>, <span class="pre">size_t</span> <em><span class="pre">size</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">alphabet</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.uint64_to_base32" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Convert numeric device ID to base32 string </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="c var">
+<dt id="c.pub_serial_enable">
+<span class="target" id="data__objects_8h_1a335a7fc1892a97b672ddfe19032b5191"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">pub_serial_enable</span></code><a class="headerlink" href="#c.pub_serial_enable" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c var">
+<dt id="c.pub_can_enable">
+<span class="target" id="data__objects_8h_1a826f2a96239d92f6497933dd662e020f"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">pub_can_enable</span></code><a class="headerlink" href="#c.pub_can_enable" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="c var">
+<dt id="c.alphabet_crockford">
+<span class="target" id="data__objects_8h_1aad7dbcff4de86dbf7949fd16f918b5b3"></span><em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <code class="sig-name descname"><span class="pre">alphabet_crockford</span></code><span class="pre">[</span><span class="pre">]</span> <span class="pre">=</span> <span class="pre">&quot;0123456789abcdefghjkmnpqrstvwxyz&quot;</span><a class="headerlink" href="#c.alphabet_crockford" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Alphabet used for base32 encoding</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Base32#Crockford's_Base32">https://en.wikipedia.org/wiki/Base32#Crockford’s_Base32</a> </p>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bms.html" class="btn btn-neutral float-left" title="BMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="misc.html" class="btn btn-neutral float-right" title="Misc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 The Libre Solar Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
